@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import TodoApp from './todo.jsx'
+import TodoApp from './Todo.jsx'
 import App from './App.jsx'
 import './index.css'
 
