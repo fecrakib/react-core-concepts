@@ -6,8 +6,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App /> */}
-    <TodoApp></TodoApp>
+    <App />
+    {/* <TodoApp></TodoApp> */}
 
   </React.StrictMode>,
 )
