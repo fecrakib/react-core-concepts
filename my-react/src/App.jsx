@@ -1,14 +1,15 @@
 
 
 import './App.css'
+import Header from './Component/Header/Header'
 
-import Friends from './Friends'
+
 function App() {
  
   return (
  <>
-<Friends></Friends>
 
+<Header></Header>
  </>
   )
 }

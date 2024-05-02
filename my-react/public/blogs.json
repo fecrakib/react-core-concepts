@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "title": "The Future of Technology",
+      "cover": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*iBm8BrKrEa4rqksP",
+      "author": "John Doe",
+      "author_img": "https://cdn.pixabay.com/photo/2023/07/04/19/43/man-8106958_1280.png",
+      "posted_date": "2024-04-30",
+      "reading_time": 10,
+      "hashtags": ["technology", "coding", "webdev"]
+    },
+    {
+      "id": 2,
+      "title": "The Future of Technology",
+      "cover": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*0_M2q_w6-WZZ5ZYO",
+      "author": "Jane Smith",
+      "author_img": "https://example.com/author2.jpg",
+      "posted_date": "2024-04-29",
+      "reading_time": 8,
+      "hashtags": ["science", "research"]
+    },
+    {
+      "id": 3,
+      "title": "The Future of Technology",
+      "cover": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*A0NWoRoWTgrfvYN0FT4eeg.jpeg",
+      "author": "Alice Johnson",
+      "author_img": "https://cdn.pixabay.com/photo/2023/07/04/19/43/man-8106958_1280.png",
+      "posted_date": "2024-04-28",
+      "reading_time": 12,
+      "hashtags": ["travel", "adventure"]
+    },
+    {
+      "id": 4,
+      "title": "The Future of Technology",
+      "cover": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*mpe_oGTSgL3wa8lC",
+      "author": "Bob Williams",
+      "author_img": "https://cdn.pixabay.com/photo/2023/07/04/19/43/man-8106958_1280.png",
+      "posted_date": "2024-04-27",
+      "reading_time": 15,
+      "hashtags": ["health", "fitness"]
+    },
+    {
+      "id": 5,
+      "title": "The Future of Technology",
+      "cover": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*auHJJTrAb3yxEod4",
+      "author": "Emily Brown",
+      "author_img": "https://cdn.pixabay.com/photo/2023/07/04/19/43/man-8106958_1280.png",
+      "posted_date": "2024-04-26",
+      "reading_time": 9,
+      "hashtags": ["food", "cooking", "recipes"]
+    }
+  ]
+  
