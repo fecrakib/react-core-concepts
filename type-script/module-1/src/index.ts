@@ -12,6 +12,12 @@ const person:Person={
     age:30,
     hobbies:["Reading","Traveling","Cooking"]
 }
-console.log(person.hobbies[0])
+// console.log(person.hobbies[0])
 person.hobbies.push("Gardening");
-console.log(person.hobbies)
+// console.log(person.hobbies)
+person.hobbies.forEach((hobby)=>{
+    console.log(hobby)
+})
+const uppercaseHobbies = person.hobbies.map(hobby => hobby.toUpperCase());
+let upperLowerCase=person.hobbies.map(hobby=>hobby.toLocaleLowerCase());
+console.log(upperLowerCase)
