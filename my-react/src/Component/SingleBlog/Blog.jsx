@@ -1,6 +1,6 @@
 
 
-function Blog({blog,handleBookMarks }) {
+function Blog({blog,handleBookMarks,handleReadingTime }) {
   const {id,title,cover,author,posted_date,hashtags,reading_time,author_img} = blog;
   return (
     <div >
@@ -30,7 +30,11 @@ function Blog({blog,handleBookMarks }) {
             }
         </h1>
        </div>
-       <button className="text-purple-700 px-3 pb-3">Mark As Read</button>
+       <div className="text-purple-700 px-3 pb-3">
+       <button  onClick={()=> handleReadingTime(reading_time)} >Mark As Read</button>
+      
+       </div>
+   
 
     </div>
   )
