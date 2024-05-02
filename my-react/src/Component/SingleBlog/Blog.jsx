@@ -31,7 +31,7 @@ function Blog({blog,handleBookMarks,handleReadingTime }) {
         </h1>
        </div>
        <div className="text-purple-700 px-3 pb-3">
-       <button  onClick={()=> handleReadingTime(reading_time)} >Mark As Read</button>
+       <button  onClick={()=> handleReadingTime(id, reading_time)} >Mark As Read</button>
       
        </div>
    

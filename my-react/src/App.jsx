@@ -10,16 +10,18 @@ import Header from './Component/Header/Header'
 
 function App() {
   const [readingTime,setReadingTime] = useState(0);
-  const handleReadingTime = (Time) => {
+  const handleReadingTime = (id, Time) => {
       const newTime = readingTime+Time;
       setReadingTime(newTime);
-      console.log("reading:",readingTime);
+      const remainingBookMark = bookMarks.filter(bookmark=>bookmark.id !==id);
+      setBookmarks(remainingBookMark);
+      console.log("reading:",id, readingTime);
   };
   const [bookMarks,setBookmarks] = useState([]);
   const handleBookMarks = blog=>{
     const newBookmarks = [...bookMarks,blog];
     setBookmarks(newBookmarks)
-    console.log(bookMarks)
+   
   };
  
   return (
