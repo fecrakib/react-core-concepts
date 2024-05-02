@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Blog from "../SingleBlog/Blog";
 
 
-function Blogs() {
+function Blogs({handleBookMarks }) {
   const [blogs,setBlogs] = useState([]);
   useEffect(()=>{
     fetch('blogs.json')
@@ -17,7 +17,7 @@ function Blogs() {
     {
       blogs.map(blog=><Blog key={blog.id}
       blog={blog}
-      
+      handleBookMarks ={handleBookMarks }
       
       >
 

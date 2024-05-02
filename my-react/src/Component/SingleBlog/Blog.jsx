@@ -1,12 +1,12 @@
 
 
-function Blog({blog}) {
+function Blog({blog,handleBookMarks }) {
   const {id,title,cover,author,posted_date,hashtags,reading_time,author_img} = blog;
   return (
     <div >
        <img className="w-full rounded-md" src={cover} alt="" /> 
        <div className="flex p-3">
-        <div className="flex ">
+        <div className="flex items-center">
            <img className="w-[10%]  rounded-full" src={author_img} alt="" />
           <div className="mx-4">
           <p>{author}</p>
@@ -15,7 +15,7 @@ function Blog({blog}) {
         </div>
         <div>
             <p>Time:{reading_time}</p>
-            <button>Add</button>
+            <button onClick={()=> handleBookMarks(blog) }>Add</button>
         </div>
        </div>
        <div className="px-3 ">
