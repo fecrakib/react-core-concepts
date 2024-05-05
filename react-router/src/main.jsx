@@ -8,8 +8,10 @@ import {
 import './index.css'
 import About from './component/About';
 import Contact from './component/contact/Contact';
-import Header from './component/Header/Header';
+
 import Home from './component/Home/Home';
+import First from './component/Frist/First';
+import Friends from './component/Friends/Friends';
 
 const router = createBrowserRouter([
   {
@@ -17,11 +19,22 @@ const router = createBrowserRouter([
     element: <Home></Home>,
     children:[
       {
-        path:"/about",
+        path:"/",
+        element:<First></First>
+
+      },
+      {
+        path:"friend",
+        element:<Friends></Friends>,
+        loader:()=>fetch('https://jsonplaceholder.typicode.com/users')
+      },
+
+      {
+        path:"about",
         element:<About></About>
       },
       {
-        path:"/contact",
+        path:"contact",
         element:<Contact></Contact>
       }
     ]
@@ -32,7 +45,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  
+
  <RouterProvider router={router} />
   </React.StrictMode>,
 )
