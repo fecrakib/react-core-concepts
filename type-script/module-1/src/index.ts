@@ -1,23 +1,19 @@
-const numbers:number[]=[1,3,4,56,5,6];
-const double:number[]=numbers.map(num=>num*2);
-let evenNumber:number[]=numbers.filter(num=>num%2==0);
+interface DictionaryTnterface<k,v>{
+    set(key:k,value:v):void;
+    get(key:k):v |undefined;
+    has(key:k):boolean;
+    remove(key:k):void;
+    size():number;
+    keys():k[];
+    values():v[];
+}
 
-interface Person{
-    name:string;
-    age:number;
-    hobbies:string[];
+class Dictionary <k,v> implements DictionaryTnterface<k,v>{
+    private items:Map<k,v>=new Map();
+    set(key: k, value: v): void {
+        this.items.set(key,value);
+    }
+    get(key: k): v | undefined {
+        this..
+    }
 }
-const person:Person={
-    name:"Rakib",
-    age:30,
-    hobbies:["Reading","Traveling","Cooking"]
-}
-// console.log(person.hobbies[0])
-person.hobbies.push("Gardening");
-// console.log(person.hobbies)
-person.hobbies.forEach((hobby)=>{
-    console.log(hobby)
-})
-const uppercaseHobbies = person.hobbies.map(hobby => hobby.toUpperCase());
-let upperLowerCase=person.hobbies.map(hobby=>hobby.toLocaleLowerCase());
-console.log(upperLowerCase)

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include JavaScript -->
+    <script>
+        function showCandidateInfo() {
+            var candidateSelect = document.getElementById("vote");
+            var selectedCandidate = candidateSelect.options[candidateSelect.selectedIndex].value;
+
+            // Set candidate name and image
+            var candidateInfoContainer = document.getElementById("candidateInfo");
+            var candidateImage = document.getElementById("candidateImage");
+            var candidateName = document.getElementById("candidateName");
+
+            // Update the name and image src based on selected candidate
+            candidateName.textContent = selectedCandidate;
+
+            // Update the image source based on the selected candidate
+            if (selectedCandidate === "Candidate 1") {
+                candidateImage.src = "candidate1.jpg";
+            } else if (selectedCandidate === "Candidate 2") {
+                candidateImage.src = "candidate2.jpg";
+            } else if (selectedCandidate === "Candidate 3") {
+                candidateImage.src = "candidate3.jpg";
+            }
+            // Add more conditions for additional candidates if needed
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-8">National Election of Bangladesh in 2024</h1>
+        <div class="container mx-auto prothomalo-english%2F2023-05%2F452eee17-d947-406c-8ad4-fb400833dde1%2FSheikh_Hasina">
+            <!-- Admin Interface -->
+        
+            <!-- User Interface -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-4">User Interface</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="voterID" class="block text-sm font-medium text-gray-700">Voter ID</label>
+                        <input type="text" id="voterID" name="voterID" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="Enter Voter ID">
+                    </div>
+                    <div class="mb-4">
+                        <label for="vote" class="block text-sm font-medium text-gray-700">Vote</label>
+                        <div class="flex items-center">
+                            <select id="vote" name="vote" class="mt-1 p-2 border border-gray-300 rounded-md w-full" onchange="showCandidateInfo()">
+                                <option value="" disabled selected>Select Candidate</option>
+                                <option value="Candidate 1">Candidate 1</option>
+                                <option value="Candidate 2">Candidate 2</option>
+                                <option value="Candidate 3">Candidate 3</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                            <!-- Candidate Info -->
+                            <div class="flex items-center ml-4">
+                                <!-- Candidate Picture -->
+                                <div class="w-12 h-12 rounded-full overflow-hidden">
+                                    <img id="candidateImage" src="https://images.prothomalo.com/prothomalo-english%2F2023-05%2F452eee17-d947-406c-8ad4-fb400833dde1%2FSheikh_Hasina.jpg?rect=29%2C0%2C675%2C450&auto=format%2Ccompress&fmt=webp&format=webp&w=576&dpr=1.0" alt="Candidate Image">
+                                </div>
+                                <!-- Candidate Name -->
+                                <h3 id="candidateName" class="text-lg font-semibold ml-2"></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md">Submit Vote</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
