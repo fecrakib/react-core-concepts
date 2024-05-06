@@ -1,31 +1,45 @@
-class Shape{
-    area():number{
-        return 0;
-    }
+
+interface DictionaryInterface<K,V> 
+{
+
+set(key:K,value:V):void;
+get(key:K):V|undefined;
+has(key:K):boolean;
+remove(key:K):void;
+size():number;
+keys():K[];
+values():V[];
 
 }
-class Circle extends Shape {
-    radius:number;
-    constructor(radius:number){
-        super();
-        this.radius=radius;
+class Dictionary<K,V>implements DictionaryInterface<K,V>{
+    private items:Map<K,V>=new Map();
+    set(key: K, value: V): void {
+        this.items.set(key,value);
     }
-    area(): number {
-        return Math.PI*this.radius*this.radius;
+    get(key: K): V | undefined {
+        return this.items.get(key);
+    }
+    has(key: K): boolean {
+        return this.items.has(key);
+    }
+    remove(key: K): void {
+         this.items.delete(key);
+
+    }
+    size(): number {
+        return this.items.size;
+    }
+    keys(): K[] {
+        return Array.from(this.items.keys())
+    }
+    values(): V[] {
+        return Array.from(this.items.values())
     }
 }
-class Rectangle extends Shape{
-    with:number;
-    height:number;
-    constructor(width:number,height:number){
-        super();
-        this.with=width;
-        this.height=height;
-    }
-    area(): number {
-        return this.with*this.height
-    }
-}
-let Shapes:Shape[]=[new Circle(5),new Rectangle(4,5)];
-console.log(Shapes);
-Shapes.forEach(shape=>console.log(shape.area()))
+
+const dictionary=new Dictionary<number,string>();
+dictionary.set(1,"One");
+dictionary.set(2,"Two");
+dictionary.set(3,"Three");
+console.log("Dictionary size:",dictionary.size());
+console.log("Dictionary Values:",dictionary.values())
