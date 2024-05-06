@@ -1,19 +1,31 @@
-interface DictionaryTnterface<k,v>{
-    set(key:k,value:v):void;
-    get(key:k):v |undefined;
-    has(key:k):boolean;
-    remove(key:k):void;
-    size():number;
-    keys():k[];
-    values():v[];
-}
+class Shape{
+    area():number{
+        return 0;
+    }
 
-class Dictionary <k,v> implements DictionaryTnterface<k,v>{
-    private items:Map<k,v>=new Map();
-    set(key: k, value: v): void {
-        this.items.set(key,value);
+}
+class Circle extends Shape {
+    radius:number;
+    constructor(radius:number){
+        super();
+        this.radius=radius;
     }
-    get(key: k): v | undefined {
-        this..
+    area(): number {
+        return Math.PI*this.radius*this.radius;
     }
 }
+class Rectangle extends Shape{
+    with:number;
+    height:number;
+    constructor(width:number,height:number){
+        super();
+        this.with=width;
+        this.height=height;
+    }
+    area(): number {
+        return this.with*this.height
+    }
+}
+let Shapes:Shape[]=[new Circle(5),new Rectangle(4,5)];
+console.log(Shapes);
+Shapes.forEach(shape=>console.log(shape.area()))
