@@ -1,12 +1,6 @@
 
-const { log } = require("node:console");
-const EventEmitter  = require("node:events");
-class MyBirthday extends EventEmitter {}
-const myBirthday1 = new MyBirthday();
-myBirthday1.on('birthday',()=>{
-    console.log('Happy Birthday')
-})
-myBirthday1.on('birthday',(b)=>{
-    console.log(`I will send ${b} girft`);
-})
-myBirthday1.emit('birthday',"Bike");
+const fs  = require('fs');
+const output = fs.readFileSync('./hell.txt',"utf-8");
+console.log(output);
+const text  = "Hello level 2";
+fs.writeFileSync("../test/write.txt",text);
