@@ -1,9 +1,12 @@
 
-let fruits = ['apple', 'banana', 'orange'];
-let lastFruit = fruits.pop();
-// lastFruit is 'orange', fruits is now ['apple', 'banana']
-console.log(lastFruit)
-
-fruits.push("payea")
-fruits.shift()
-console.log(fruits)
+const { log } = require("node:console");
+const EventEmitter  = require("node:events");
+class MyBirthday extends EventEmitter {}
+const myBirthday1 = new MyBirthday();
+myBirthday1.on('birthday',()=>{
+    console.log('Happy Birthday')
+})
+myBirthday1.on('birthday',(b)=>{
+    console.log(`I will send ${b} girft`);
+})
+myBirthday1.emit('birthday',"Bike");
