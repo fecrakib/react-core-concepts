@@ -1,24 +1,24 @@
 const express = require('express');
-const path  = require('path');
-const app = express();
-const port  = 3000;
+
+const app  = express();
+const port= 3002;
+const mongoose = require('mongoose');
+const connectDb = async () => {
+ try{
+    await mongoose.connect('mongodb://127.0.0.1:27017/testProductDB')
+    console.log("database is connected")
+
+ }catch (ere){
+ console.log(ere)
+ }
+};
+
+
+app.listen(port,async()=>{
+    console.log(`server is running at http://locathost:${port} `)
+     await connectDb();
+})
+
 app.get('/',(req,res)=>{
-    // res.send("Hello world"),
-    res.json({name:"Rakib"});
+    res.send(("This is home pageS"))
 })
-app.get('/home',(req,res)=>{
-    const filePath = path.join(__dirname,'index.html');
-    res.sendFile(filePath,(err)=>{
-        console.error("Error sending file:,err");
-        res.status(5000).send("Internal server error")
-    })
-  
-})
-
-app.post('/', (req, res) => {
-  res.send('POST request to the homepage')
-})
-app.listen(port,()=>{
-    console.log(`Server running on port ${port}`)
-})
-
