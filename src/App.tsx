@@ -1,7 +1,7 @@
 
 
 import './App.css'
-import ComponentFunction from './Components/ComponentFunction'
+import UserInfo from './Components/UserInfo'
 
 function App() {
   
@@ -9,7 +9,9 @@ function App() {
   return (
     <div className='border border-purple-500 m-10 p-50
      '>
-    <ComponentFunction></ComponentFunction>
+  
+  {/* <ComponentFunction></ComponentFunction> */}
+  <UserInfo></UserInfo>
     </div>
   )
 }
