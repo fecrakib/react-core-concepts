@@ -1,7 +1,8 @@
 
 
 import './App.css'
-import UserInfo from './Components/UserInfo'
+import UserinfoReducer from './Components/UserinfoReduser'
+// import UserInfo from './Components/UserInfo'
 
 function App() {
   
@@ -11,7 +12,8 @@ function App() {
      '>
   
   {/* <ComponentFunction></ComponentFunction> */}
-  <UserInfo></UserInfo>
+  {/* <UserInfo></UserInfo> */}
+  <UserinfoReducer></UserinfoReducer>
     </div>
   )
 }
